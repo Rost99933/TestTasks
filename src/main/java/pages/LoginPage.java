@@ -3,32 +3,32 @@ package pages;
 
 import libs.ConfigData;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import java.io.IOException;
 
-public class LoginPage extends ParrentPage {
+public class LoginPage extends ParentPage {
 
-    String inputUsername = "_username";
-    String inputPassword = "password";
-    String clickSubmitBtn = "//button[@class='btn btn-primary btn-block btn-flat']";
+    @FindBy(name = "_username")
+    WebElement EmailField;
 
-    By inputUsername1 = By.name("_username");
-    By inputPassword1 = By.id("password");
-    By clickSubmitBtn1 = By.xpath("//button[@class='btn btn-primary btn-block btn-flat']");
+    @FindBy(id = "password")
+    WebElement PasswordField;
 
-    WebElement inputUsername2 = driver.findElement(By.xpath("//input[@placeholder='Email']"));
-    WebElement inputPassword2 = driver.findElement(By.id("password"));
-    WebElement clickSubmitBtn2 = driver.findElement(By.xpath("//button[@class='btn btn-primary btn-block btn-flat']"));
+    @FindBy(className = "btn btn-primary btn-block btn-flat")
+    WebElement SubmitBtn;
+
 
     public LoginPage(WebDriver driver) {
+
         super(driver);
     }
 
-    public void OpenPageLogin() {
-        try {
+    public void OpenLoginPage() {
+        try
+        {
             driver.get(ConfigData.getCfgValue("base_url") + "/login");
             log.info("Page Login was opened");
         } catch (IOException e) {
@@ -46,18 +46,18 @@ public class LoginPage extends ParrentPage {
         }
     }
 
-    public void InputValueToNameField(String LoginValue) {
-        actionsWithWebElements.inputTextToField(inputUsername2, LoginValue);
+    public void InputValueToEmailField(String LoginValue) {
+        actionsWithWebElements.inputTextToField(EmailField, LoginValue);
     }
 
-    public void InputValueToFieldPassword(String LoginValue) {
-        actionsWithWebElements.inputTextToField(inputPassword2, LoginValue);
+    public void InputValueToFieldPassword(String Password) {
+
+        actionsWithWebElements.inputTextToField(PasswordField, Password);
     }
 
-    public void ClickButtonSubmit(String LoginValue) {
-        actionsWithWebElements.clickButton(clickSubmitBtn2, LoginValue);
+    public void ClickBtnSubmit(String SubmitButton) {
+
+        actionsWithWebElements.clickButton(SubmitBtn, SubmitButton);
     }
-
-
 
 }

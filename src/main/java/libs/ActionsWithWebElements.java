@@ -6,9 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import pages.ParrentPage;
+import pages.ParentPage;
 
-public class ActionsWithWebElements extends ParrentPage {
+public class ActionsWithWebElements extends ParentPage {
 
     WebDriver driver;
     Logger log;
@@ -24,7 +24,7 @@ public class ActionsWithWebElements extends ParrentPage {
         try {
             driver.findElement(By.xpath(String.valueOf(inputField))).clear();
             driver.findElement(By.xpath(String.valueOf(inputField))).sendKeys(inputText);
-            log.info("text is inputed");
+            log.info("text is inputted");
         } catch (Exception ex) {
             ex.printStackTrace();
             log.error("Text is not input");
@@ -32,7 +32,7 @@ public class ActionsWithWebElements extends ParrentPage {
         }
     }
 
-    public void clickButton(WebElement clickSubmitBtn2, String buttonXPath) {
+    public void clickButton(WebElement clickSubmitBtn, String buttonXPath) {
         try {
             driver.findElement(By.xpath(buttonXPath)).click();
             log.info("Button is clicked");
