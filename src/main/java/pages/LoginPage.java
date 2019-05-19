@@ -17,7 +17,7 @@ public class LoginPage extends ParentPage {
     @FindBy(id = "password")
     WebElement PasswordField;
 
-    @FindBy(className = "btn btn-primary btn-block btn-flat")
+    @FindBy(xpath = "//button[@class='btn btn-primary btn-block btn-flat']")
     WebElement SubmitBtn;
 
 
@@ -55,9 +55,9 @@ public class LoginPage extends ParentPage {
         actionsWithWebElements.inputTextToField(PasswordField, Password);
     }
 
-    public void ClickBtnSubmit(String SubmitButton) {
+    public void ClickBtnSubmit() {
 
-        actionsWithWebElements.clickButton(SubmitBtn, SubmitButton);
+        actionsWithWebElements.clickButton(SubmitBtn);
     }
 
 }

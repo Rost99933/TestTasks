@@ -22,8 +22,8 @@ public class ActionsWithWebElements extends ParentPage {
      */
     public void inputTextToField(WebElement inputField, String inputText) {
         try {
-            driver.findElement(By.xpath(String.valueOf(inputField))).clear();
-            driver.findElement(By.xpath(String.valueOf(inputField))).sendKeys(inputText);
+            inputField.clear();
+            inputField.sendKeys(inputText);
             log.info("text is inputted");
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -32,9 +32,9 @@ public class ActionsWithWebElements extends ParentPage {
         }
     }
 
-    public void clickButton(WebElement clickSubmitBtn, String buttonXPath) {
+    public void clickButton(WebElement SubmitBtn) {
         try {
-            driver.findElement(By.xpath(buttonXPath)).click();
+            SubmitBtn.click();
             log.info("Button is clicked");
         } catch (Exception ex) {
             ex.printStackTrace();

@@ -1,0 +1,29 @@
+2019-19-05 12:23:09   INFO [loginTest.LoginTest] : Remote Driver will be started
+2019-19-05 12:23:56   INFO [loginTest.LoginTest] : Chrome will be started
+2019-19-05 12:24:05   INFO [loginTest.LoginTest] : Chrome is started
+2019-19-05 12:24:07   INFO [pages.LoginPage] : Page Login was opened
+2019-19-05 12:24:07  ERROR [libs.ActionsWithWebElements] : Text is not input
+2019-19-05 12:28:10   INFO [loginTest.LoginTest] : Chrome will be started
+2019-19-05 12:28:18   INFO [loginTest.LoginTest] : Chrome is started
+2019-19-05 12:28:21   INFO [pages.LoginPage] : Page Login was opened
+2019-19-05 12:28:21   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-19-05 12:28:21   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-19-05 12:28:21  ERROR [libs.ActionsWithWebElements] : Button is not clicked
+2019-19-05 12:31:35   INFO [loginTest.LoginTest] : Chrome will be started
+2019-19-05 12:31:41   INFO [loginTest.LoginTest] : Chrome is started
+2019-19-05 12:31:45   INFO [pages.LoginPage] : Page Login was opened
+2019-19-05 12:31:45   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-19-05 12:31:45   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-19-05 12:31:46   INFO [libs.ActionsWithWebElements] : Button is clicked
+2019-19-05 12:32:15   INFO [loginTest.LoginTest] : Chrome will be started
+2019-19-05 12:32:21   INFO [loginTest.LoginTest] : Chrome is started
+2019-19-05 12:32:23   INFO [pages.LoginPage] : Page Login was opened
+2019-19-05 12:32:23   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-19-05 12:32:23   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-19-05 12:32:23   INFO [libs.ActionsWithWebElements] : Button is clicked
+2019-19-05 12:33:32   INFO [loginTest.LoginTest] : Chrome will be started
+2019-19-05 12:33:37   INFO [loginTest.LoginTest] : Chrome is started
+2019-19-05 12:33:39   INFO [pages.LoginPage] : Page Login was opened
+2019-19-05 12:33:39   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-19-05 12:33:39   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-19-05 12:33:40   INFO [libs.ActionsWithWebElements] : Button is clicked
