@@ -10,10 +10,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 
-//import Pages.*;
-//import libs.ExcelDriver;
-//import libs.ExcelDriver;
-//import libs.Utils;
+// import Pages.*;
+// import libs.ExcelDriver;
+// import libs.ExcelDriver;
+import libs.Utils;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,9 +24,9 @@ import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-//import pages.ApparatPage;
-//import pages.EditApparatPage;
-//import pages.HomePage;
+// import pages.ApparatPage;
+// import pages.EditApparatPage;
+// import pages.HomePage;
 import pages.LoginPage;
 
 import java.io.File;
@@ -55,7 +55,7 @@ public class ParentTests {
     // public EditApparatPage editApparatPage;
     // public TypeSdelkiPage typeSdelkiPage;
     // public EditTypeSdelkiPage editTypeSdelkiPage;
-    // private Utils utils = new Utils();
+    private Utils utils = new Utils();
     public boolean isTestPass = false;
     private String pathToScreenShot;
     private String browser;
@@ -76,23 +76,22 @@ public class ParentTests {
         return Arrays.asList(new Object[][]{
                 // {"fireFox"}
                 //    ,
-                //{"chrome"}
-                //  ,
+                 {"chrome"}
+                  ,
                 //  { "iedriver" }
 //                ,
 //                    { "opera" }
 //                ,
 //                {"phantomJs"}
 //                ,
-                {"remote"}
+//                {"remote"}
         });
     }
 
 
-
     @Before
     public void setUp() {
-        //pathToScreenShot = "..\\ClassWork\\target\\screenshot\\" + this.getClass().getPackage().getName() + "\\" + this.getClass().getSimpleName()
+        // pathToScreenShot = "..\\ClassWork\\target\\screenshot\\" + this.getClass().getPackage().getName() + "\\" + this.getClass().getSimpleName()
         // + this.testName.getMethodName() + ".jpg";
 
         if ("chrome".equals(browser)) {
@@ -139,10 +138,10 @@ public class ParentTests {
         loginPage = new LoginPage(driver);
         // homePage = new HomePage(driver);
         // sdelkiListPage = new SdelkiListPage(driver);
-        //editSdelkiPage = new EditSdelkiPage(driver);
-        //sparePage = new SparePage(driver);
-        //editNewSparePage = new EditNewSparePage(driver);
-        //apparatPage = new ApparatPage(driver);
+        // editSdelkiPage = new EditSdelkiPage(driver);
+        // sparePage = new SparePage(driver);
+        // editNewSparePage = new EditNewSparePage(driver);
+        // apparatPage = new ApparatPage(driver);
         // editApparatPage = new EditApparatPage(driver);
         // typeSdelkiPage = new TypeSdelkiPage(driver);
         // editTypeSdelkiPage = new EditTypeSdelkiPage(driver);
@@ -155,29 +154,27 @@ public class ParentTests {
     @After
     public void tearDown() {
         //  if (!isTestPass){
-        // utils.screenShot(pathToScreenShot, driver);
+         utils.screenShot(pathToScreenShot, driver);
         // }
         driver.quit();
     }
 
-    protected void checkAcceptanceCriteria(String message, boolean actual, boolean expected){
+    protected void checkAcceptanceCriteria(String message, boolean actual, boolean expected) {
         // if (actual != expected){
-        // utils.screenShot(pathToScreenShot, driver);
+         utils.screenShot(pathToScreenShot, driver);
 
         //  }
-        Assert.assertThat(message, actual, is (expected));
+        Assert.assertThat(message, actual, is(expected));
         isTestPass = true;
     }
 
-    protected void checkAcceptanceCriteria(String message, String actual, String expected){
+    protected void checkAcceptanceCriteria(String message, String actual, String expected) {
         //  if (!actual.equals(expected)) {
-        //utils.screenShot(pathToScreenShot, driver);
+         utils.screenShot(pathToScreenShot, driver);
         //  }
-        Assert.assertThat(message, actual, is (expected));
+        Assert.assertThat(message, actual, is(expected));
         isTestPass = true;
     }
-
-
 
 
 }
