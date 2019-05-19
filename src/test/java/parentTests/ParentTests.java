@@ -26,7 +26,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 // import pages.ApparatPage;
 // import pages.EditApparatPage;
-// import pages.HomePage;
+import pages.HomePage;
 import pages.LoginPage;
 
 import java.io.File;
@@ -46,7 +46,7 @@ public class ParentTests {
 
     WebDriver driver;
     public LoginPage loginPage;
-    // public HomePage homePage;
+    public HomePage homePage;
     // public SdelkiListPage sdelkiListPage;
     // public EditSdelkiPage editSdelkiPage;
     // public SparePage sparePage;
@@ -76,8 +76,8 @@ public class ParentTests {
         return Arrays.asList(new Object[][]{
                 // {"fireFox"}
                 //    ,
-                 {"chrome"}
-                  ,
+                {"chrome"}
+                ,
                 //  { "iedriver" }
 //                ,
 //                    { "opera" }
@@ -136,7 +136,7 @@ public class ParentTests {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         loginPage = new LoginPage(driver);
-        // homePage = new HomePage(driver);
+        homePage = new HomePage(driver);
         // sdelkiListPage = new SdelkiListPage(driver);
         // editSdelkiPage = new EditSdelkiPage(driver);
         // sparePage = new SparePage(driver);
@@ -154,14 +154,14 @@ public class ParentTests {
     @After
     public void tearDown() {
         //  if (!isTestPass){
-         utils.screenShot(pathToScreenShot, driver);
+        utils.screenShot(pathToScreenShot, driver);
         // }
         driver.quit();
     }
 
     protected void checkAcceptanceCriteria(String message, boolean actual, boolean expected) {
         // if (actual != expected){
-         utils.screenShot(pathToScreenShot, driver);
+        utils.screenShot(pathToScreenShot, driver);
 
         //  }
         Assert.assertThat(message, actual, is(expected));
@@ -170,7 +170,7 @@ public class ParentTests {
 
     protected void checkAcceptanceCriteria(String message, String actual, String expected) {
         //  if (!actual.equals(expected)) {
-         utils.screenShot(pathToScreenShot, driver);
+        utils.screenShot(pathToScreenShot, driver);
         //  }
         Assert.assertThat(message, actual, is(expected));
         isTestPass = true;
