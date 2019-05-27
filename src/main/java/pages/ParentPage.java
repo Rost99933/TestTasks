@@ -13,7 +13,8 @@ public class ParentPage {
     WebDriver driver;
     Logger log;
     ActionsWithWebElements actionsWithWebElements;
-
+    public ParentPage parentPage;
+    WebElement element;
 
     @FindBy(tagName = "h1")
     protected WebElement zagolovok;
@@ -23,7 +24,9 @@ public class ParentPage {
         log = Logger.getLogger(getClass());
         actionsWithWebElements = new ActionsWithWebElements(driver);
         PageFactory.initElements(driver,this);
+        }
 
+    public ParentPage() {
     }
 
     public String getTitle() {
@@ -37,10 +40,12 @@ public class ParentPage {
     }
 
     public void checkZagolovok(String zagolovokText) {
-        Assert.assertEquals("Zagolovok is not matched", zagolovok.getText(), zagolovokText);
+        Assert.assertEquals("Title is not matched", zagolovok.getText(), zagolovokText);
     }
 
     public boolean isElementPresent(WebElement element){
+
         return element.isDisplayed() && element.isEnabled();
     }
+
 }

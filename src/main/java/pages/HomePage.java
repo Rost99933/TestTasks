@@ -11,28 +11,45 @@ public class HomePage extends ParentPage {
     @FindBy(xpath = ".//div[@class='pull-left image']//img[@class='img-circle']")
     WebElement avatar;
 
-    @FindBy (xpath = ".//li[@id='deal']")
-    WebElement sdelki;
-
-    @FindBy(xpath =".//*[@id='dictionary']/a")
-    private WebElement menuDictionary;
-
     @FindBy(id = "spares")
     private WebElement subMenuSpare;
 
     @FindBy(id="apparat")
     private WebElement subMenuApparat;
 
-    @FindBy(xpath = ".//a[@class='dropdown-toggle']")
+    @FindBy(className = "dropdown-toggle")
     private WebElement avatarStudent;
 
     @FindBy(xpath = ".//a[@href='/logout']")
     private WebElement buttonLogout;
 
-    @FindBy(xpath = ".//a[@ href='/dictionary/deal_type']")
+    @FindBy(id = "deal_type")
     private WebElement subMenuTypeSdelki;
 
-    String TitleLogo = "//a[@class='logo']";
+    @FindBy (className = "logo")
+    private WebElement titleLogo;
+
+    @FindBy (xpath = "//div[@class='pull-left info']")
+    private WebElement studentNameGeneralMenu;
+
+    @FindBy (id = "dashboard")
+    private WebElement buttonMain;
+
+    @FindBy (id = "dictionary")
+    private WebElement menuDictionary;
+
+    @FindBy (id = "service_apparat")
+    private WebElement buttonObsluzhivanie;
+
+    @FindBy (id = "installation")
+    private WebElement buttonYstanovka;
+
+    @FindBy (id = "deal")
+    private WebElement buttonSdelki;
+
+    @FindBy (id = "report")
+    private WebElement Sdelki;
+
 
 
 
@@ -47,11 +64,11 @@ public class HomePage extends ParentPage {
     }
 
 
-    public void clickOnMenuDictionary() {
-        actionsWithWebElements.ClickToElements(menuDictionary);
-    }
+//    public void clickOnMenuDictionary() {
+//        actionsWithWebElements.ClickToElements(menuDictionary);
+//    }
 
-    public void clickOnSubMenuApparat() {
-        actionsWithWebElements.ClickToElements(subMenuApparat);
-    }
+//    public void clickOnSubMenuApparat() {
+//        actionsWithWebElements.ClickToElements(subMenuApparat);
+//    }
 }

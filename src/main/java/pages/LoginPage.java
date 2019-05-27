@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.io.IOException;
 
 public class LoginPage extends ParentPage {
@@ -58,6 +57,13 @@ public class LoginPage extends ParentPage {
     public void ClickBtnSubmit() {
 
         actionsWithWebElements.clickButton(SubmitBtn);
+    }
+
+    public void LoginUser (String login, String password){
+        OpenLoginPage();
+        InputValueToEmailField(login);
+        InputValueToFieldPassword(password);
+        ClickBtnSubmit();
     }
 
 }
