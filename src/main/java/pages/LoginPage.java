@@ -46,6 +46,7 @@ public class LoginPage extends ParentPage {
     }
 
     public void InputValueToEmailField(String LoginValue) {
+
         actionsWithWebElements.inputTextToField(EmailField, LoginValue);
     }
 
@@ -60,6 +61,7 @@ public class LoginPage extends ParentPage {
     }
 
     public void LoginUser (String login, String password){
+
         OpenLoginPage();
         InputValueToEmailField(login);
         InputValueToFieldPassword(password);
