@@ -146,6 +146,7 @@ public class ParentTests {
         // editApparatPage = new EditApparatPage(driver);
         // typeSdelkiPage = new TypeSdelkiPage(driver);
         // editTypeSdelkiPage = new EditTypeSdelkiPage(driver);
+        vocabluaryPage = new VocabluaryPage(driver);
 
          excelDriver = new ExcelDriver();
 

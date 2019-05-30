@@ -39,10 +39,10 @@ public class VocabluaryPage extends ParentPage {
 
     public void clickBtnVocabluary() {
         try {
-            driver.findElement(By.id("dictionary")).click();
+            buttonVocabularyMainMenu.click();
             log.info("Button is clicked");
         } catch (Exception e) {
-            System.out.println("Problem");
+            System.out.println("Smth problem is happend");
             log.error("Button not clicked");
         }
     }

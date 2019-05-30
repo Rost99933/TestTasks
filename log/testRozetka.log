@@ -627,3 +627,19 @@
 2019-30-05 11:51:15   INFO [libs.ActionsWithWebElements] : text is inputted
 2019-30-05 11:51:16   INFO [libs.ActionsWithWebElements] : Button is clicked
 2019-30-05 11:51:16   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\VocabluaryTestscheckButtonText[0].jpg
+2019-30-05 12:37:39   INFO [vocabluaryTests.VocabluaryTests] : Chrome will be started
+2019-30-05 12:37:45   INFO [vocabluaryTests.VocabluaryTests] : Chrome is started
+2019-30-05 12:37:46   INFO [pages.LoginPage] : Page Login was opened
+2019-30-05 12:37:46   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-30-05 12:37:46   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-30-05 12:37:47   INFO [libs.ActionsWithWebElements] : Button is clicked
+2019-30-05 12:37:47   INFO [pages.VocabluaryPage] : Button is clicked
+2019-30-05 12:37:48   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\VocabluaryTestscheckButtonText[0].jpg
+2019-30-05 12:45:48   INFO [vocabluaryTests.VocabluaryTests] : Chrome will be started
+2019-30-05 12:45:54   INFO [vocabluaryTests.VocabluaryTests] : Chrome is started
+2019-30-05 12:45:55   INFO [pages.LoginPage] : Page Login was opened
+2019-30-05 12:45:55   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-30-05 12:45:56   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-30-05 12:45:56   INFO [libs.ActionsWithWebElements] : Button is clicked
+2019-30-05 12:45:56   INFO [pages.VocabluaryPage] : Button is clicked
+2019-30-05 12:45:57   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\VocabluaryTestscheckButtonText[0].jpg
