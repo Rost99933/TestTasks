@@ -16,7 +16,9 @@ public class VocabluaryTests extends ParentTests {
     public void checkButtonText() throws InterruptedException {
         loginPage.LoginUser("Student", "909090");
         vocabluaryPage.clickBtnVocabluary();
-//        checkAcceptanceCriteria("Not match", vocabluaryPage.getButtonName(),"Словари");
-//        checkAcceptanceCriteria("Not present",vocabluaryPage.isTextPresent(), true);
+        checkAcceptanceCriteria("Not match", vocabluaryPage.getButtonName(),"Словари\nАппарат");
+        checkAcceptanceCriteria("Not present",vocabluaryPage.isTextPresent(), true);
         }
+
+
 }

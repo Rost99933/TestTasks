@@ -1,5 +1,7 @@
 package parentTests;
 
+import libs.ExcelDriver;
+import libs.Utils;
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Assert;
@@ -8,23 +10,15 @@ import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
-
-// import Pages.*;
-import libs.ExcelDriver;
-import libs.Utils;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-// import pages.ApparatPage;
-// import pages.EditApparatPage;
+import pages.ApparatePage;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.VocabluaryPage;
@@ -39,6 +33,10 @@ import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.CoreMatchers.is;
 
+// import Pages.*;
+// import pages.ApparatPage;
+// import pages.EditApparatPage;
+
 @RunWith(value = Parameterized.class)
 
 
@@ -48,6 +46,7 @@ public class ParentTests {
     public LoginPage loginPage;
     public HomePage homePage;
     public VocabluaryPage vocabluaryPage;
+    public ApparatePage apparatePage;
     // public SdelkiListPage sdelkiListPage;
     // public EditSdelkiPage editSdelkiPage;
     // public SparePage sparePage;
@@ -92,8 +91,8 @@ public class ParentTests {
 
     @Before
     public void setUp() {
-         pathToScreenShot = "..\\ClassWork\\target\\screenshot\\" + this.getClass().getPackage().getName() + "\\" + this.getClass().getSimpleName()
-         + this.testName.getMethodName() + ".jpg";
+        pathToScreenShot = "..\\ClassWork\\target\\screenshot\\" + this.getClass().getPackage().getName() + "\\" + this.getClass().getSimpleName()
+                + this.testName.getMethodName() + ".jpg";
 
         if ("chrome".equals(browser)) {
             log.info("Chrome will be started");
@@ -147,8 +146,8 @@ public class ParentTests {
         // typeSdelkiPage = new TypeSdelkiPage(driver);
         // editTypeSdelkiPage = new EditTypeSdelkiPage(driver);
         vocabluaryPage = new VocabluaryPage(driver);
-
-         excelDriver = new ExcelDriver();
+        excelDriver = new ExcelDriver();
+        apparatePage = new ApparatePage(driver);
 
 
     }

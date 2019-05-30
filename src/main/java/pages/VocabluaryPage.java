@@ -1,13 +1,8 @@
 package pages;
 
-import libs.ConfigData;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.io.IOException;
 
 public class VocabluaryPage extends ParentPage {
 
@@ -47,7 +42,7 @@ public class VocabluaryPage extends ParentPage {
         }
     }
 
-    public String getButtonName() throws InterruptedException {
+    public String getButtonName() {
 
         String s = buttonVocabularyMainMenu.getText();
         System.out.println(s);
@@ -57,12 +52,6 @@ public class VocabluaryPage extends ParentPage {
     public boolean isTextPresent() {
 
         return actionsWithWebElements.isElementPresent(buttonVocabularyMainMenu);
-    }
-
-    public void OpenTheDropDownElement() throws InterruptedException {
-        Thread.sleep(3000);
-        clickBtnVocabluary();
-        Thread.sleep(5000);
     }
 
 }
