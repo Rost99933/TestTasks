@@ -11,8 +11,7 @@ import org.junit.runners.Parameterized;
 
 
 // import Pages.*;
-// import libs.ExcelDriver;
-// import libs.ExcelDriver;
+import libs.ExcelDriver;
 import libs.Utils;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -26,8 +25,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 // import pages.ApparatPage;
 // import pages.EditApparatPage;
-// import pages.HomePage;
+import pages.HomePage;
 import pages.LoginPage;
+import pages.VocabluaryPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -46,7 +46,8 @@ public class ParentTests {
 
     WebDriver driver;
     public LoginPage loginPage;
-    // public HomePage homePage;
+    public HomePage homePage;
+    public VocabluaryPage vocabluaryPage;
     // public SdelkiListPage sdelkiListPage;
     // public EditSdelkiPage editSdelkiPage;
     // public SparePage sparePage;
@@ -60,7 +61,7 @@ public class ParentTests {
     private String pathToScreenShot;
     private String browser;
     Logger log;
-    // public ExcelDriver excelDriver;
+    public ExcelDriver excelDriver;
 
     @Rule
     public TestName testName = new TestName();
@@ -76,8 +77,8 @@ public class ParentTests {
         return Arrays.asList(new Object[][]{
                 // {"fireFox"}
                 //    ,
-                 {"chrome"}
-                  ,
+                {"chrome"}
+                ,
                 //  { "iedriver" }
 //                ,
 //                    { "opera" }
@@ -91,8 +92,8 @@ public class ParentTests {
 
     @Before
     public void setUp() {
-        // pathToScreenShot = "..\\ClassWork\\target\\screenshot\\" + this.getClass().getPackage().getName() + "\\" + this.getClass().getSimpleName()
-        // + this.testName.getMethodName() + ".jpg";
+         pathToScreenShot = "..\\ClassWork\\target\\screenshot\\" + this.getClass().getPackage().getName() + "\\" + this.getClass().getSimpleName()
+         + this.testName.getMethodName() + ".jpg";
 
         if ("chrome".equals(browser)) {
             log.info("Chrome will be started");
@@ -136,7 +137,7 @@ public class ParentTests {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         loginPage = new LoginPage(driver);
-        // homePage = new HomePage(driver);
+        homePage = new HomePage(driver);
         // sdelkiListPage = new SdelkiListPage(driver);
         // editSdelkiPage = new EditSdelkiPage(driver);
         // sparePage = new SparePage(driver);
@@ -146,7 +147,7 @@ public class ParentTests {
         // typeSdelkiPage = new TypeSdelkiPage(driver);
         // editTypeSdelkiPage = new EditTypeSdelkiPage(driver);
 
-        // excelDriver = new ExcelDriver();
+         excelDriver = new ExcelDriver();
 
 
     }
@@ -154,14 +155,14 @@ public class ParentTests {
     @After
     public void tearDown() {
         //  if (!isTestPass){
-         utils.screenShot(pathToScreenShot, driver);
+        utils.screenShot(pathToScreenShot, driver);
         // }
         driver.quit();
     }
 
     protected void checkAcceptanceCriteria(String message, boolean actual, boolean expected) {
         // if (actual != expected){
-         utils.screenShot(pathToScreenShot, driver);
+        utils.screenShot(pathToScreenShot, driver);
 
         //  }
         Assert.assertThat(message, actual, is(expected));
@@ -170,7 +171,7 @@ public class ParentTests {
 
     protected void checkAcceptanceCriteria(String message, String actual, String expected) {
         //  if (!actual.equals(expected)) {
-         utils.screenShot(pathToScreenShot, driver);
+        utils.screenShot(pathToScreenShot, driver);
         //  }
         Assert.assertThat(message, actual, is(expected));
         isTestPass = true;

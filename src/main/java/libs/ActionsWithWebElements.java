@@ -6,16 +6,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ParentPage;
 
 public class ActionsWithWebElements extends ParentPage {
 
     WebDriver driver;
     Logger log;
+    WebDriverWait webDriverWait;
 
     public ActionsWithWebElements(WebDriver webDriver) {
         this.driver = webDriver;
         log = Logger.getLogger(getClass());
+        webDriverWait = new WebDriverWait(driver, 3);
     }
 
     /** this method input text into text field
@@ -112,6 +115,10 @@ public class ActionsWithWebElements extends ParentPage {
         }
     }
 
-    //ActionsWithWebElements actionsWithWebElements = new ActionsWithWebElements(driver.chromeDriver);
-    //actionsWithWebElements.inputTextToField(LoginInputField(XPath, login));
+    public String getText (WebElement element) {
+
+        return element.getText();
+    }
+
+
 }
