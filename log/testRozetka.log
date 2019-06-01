@@ -773,3 +773,22 @@
 2019-30-05 16:12:47   INFO [libs.ActionsWithWebElements] : text is inputted
 2019-30-05 16:12:48   INFO [libs.ActionsWithWebElements] : Button is clicked
 2019-30-05 16:12:48   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\ApparateTestsaddNewVocabluaryApparateItem[0].jpg
+2019-01-06 11:05:25   INFO [vocabluaryTests.VocabluaryTests] : Chrome will be started
+2019-01-06 11:05:33   INFO [vocabluaryTests.VocabluaryTests] : Chrome is started
+2019-01-06 11:05:36   INFO [pages.LoginPage] : Page Login was opened
+2019-01-06 11:05:37   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-01-06 11:05:37   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-01-06 11:05:38   INFO [libs.ActionsWithWebElements] : Button is clicked
+2019-01-06 11:05:38   INFO [pages.VocabluaryPage] : Button is clicked
+2019-01-06 11:05:38   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\VocabluaryTestscheckButtonText[0].jpg
+2019-01-06 11:05:39   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\VocabluaryTestscheckButtonText[0].jpg
+2019-01-06 11:05:39   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\VocabluaryTestscheckButtonText[0].jpg
+2019-01-06 11:19:56   INFO [vocabluaryTests.VocabluaryTests] : Chrome will be started
+2019-01-06 11:20:02   INFO [vocabluaryTests.VocabluaryTests] : Chrome is started
+2019-01-06 11:20:03   INFO [pages.LoginPage] : Page Login was opened
+2019-01-06 11:20:04   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-01-06 11:20:04   INFO [libs.ActionsWithWebElements] : text is inputted
+2019-01-06 11:20:04   INFO [libs.ActionsWithWebElements] : Button is clicked
+2019-01-06 11:20:04   INFO [pages.VocabluaryPage] : Button is clicked
+2019-01-06 11:20:05   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\VocabluaryTestscheckButtonText[0].jpg
+2019-01-06 11:20:05   INFO [libs.Utils] : ScreenShot: ..\ClassWork\target\screenshot\vocabluaryTests\VocabluaryTestscheckButtonText[0].jpg
